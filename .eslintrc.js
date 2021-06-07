@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['unused-imports', 'prettier'],
   extends: ['@react-native-community', 'prettier'],
   rules: {
+    'react-native/no-inline-styles': 0,
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
