@@ -4,6 +4,7 @@ export type HomeScreenTabNavigatorParamsList = {
   Home: undefined;
   Rooms: undefined;
   People: undefined;
+  Login: undefined;
 };
 
 export type HomeTabNavigationProp = MaterialBottomTabNavigationProp<
@@ -13,4 +14,8 @@ export type HomeTabNavigationProp = MaterialBottomTabNavigationProp<
 export type RoomsTabNavigationProp = MaterialBottomTabNavigationProp<
   HomeScreenTabNavigatorParamsList,
   'Rooms'
+>;
+export type PeopleTabNavigationProp = MaterialBottomTabNavigationProp<
+  HomeScreenTabNavigatorParamsList,
+  'People'
 >;
