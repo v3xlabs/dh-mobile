@@ -1,22 +1,17 @@
 import 'react-native-gesture-handler';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 
-import HomeScreen from './src/screens/HomeScreen';
-import { HomeScreenTabNavigatorParamsList } from './src/types/NavigationPropTypes';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { AuthContextProvider } from './src/Contexts/AuthContext';
 import { NavigationContainer } from '@react-navigation/native';
-import PeopleScreen from './src/screens/PeopleScreen';
+import Navigator from './src/screens/HomeTabs/Navigator';
 import React from 'react';
-import RoomsScreen from './src/screens/RoomsScreen';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 declare global {
   namespace ReactNativePaper {
     interface ThemeColors {
-      background: string;
+      red: string;
     }
 
     interface Theme {
@@ -25,7 +20,7 @@ declare global {
   }
 }
 
-export const theme = {
+const theme = {
   ...DefaultTheme,
   // Specify custom property
   dark: true,
@@ -33,9 +28,8 @@ export const theme = {
   // Specify custom property in nested object
   colors: {
     ...DefaultTheme.colors,
-    text: 'white',
-    primary: '#0b0e11',
-    secondary: '#5575e7',
+    red: '#fd4d4d',
+    text: '#dee3ea',
   },
 };
 
@@ -63,50 +57,19 @@ export const theme = {
         buttonText: "#fff"
 */
 
-const HomeScreenStackNavigator =
-  createMaterialBottomTabNavigator<HomeScreenTabNavigatorParamsList>();
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
       <StatusBar
-        barStyle={'light-content'}
+        barStyle="dark-content"
+        translucent={false}
         backgroundColor={theme.colors.primary}
       />
       <NavigationContainer>
         <PaperProvider theme={theme}>
-          <HomeScreenStackNavigator.Navigator
-            initialRouteName="Home"
-            screenOptions={{ tabBarColor: 'red' }}
-          >
-            <HomeScreenStackNavigator.Screen
-              name="Home"
-              component={HomeScreen}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <Icon name="home" size={24} color={color} />
-                ),
-              }}
-            />
-            <HomeScreenStackNavigator.Screen
-              name="Rooms"
-              component={RoomsScreen}
-              options={{
-                tabBarColor: '#0b0e11',
-                tabBarIcon: ({ color }) => (
-                  <Icon name="water-boiler" size={24} color={color} />
-                ),
-              }}
-            />
-            <HomeScreenStackNavigator.Screen
-              name="People"
-              component={PeopleScreen}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <Icon name="water-boiler" size={24} color={color} />
-                ),
-              }}
-            />
-          </HomeScreenStackNavigator.Navigator>
+          <AuthContextProvider>
+            <Navigator />
+          </AuthContextProvider>
         </PaperProvider>
       </NavigationContainer>
     </SafeAreaView>
