@@ -11,7 +11,25 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1789990F51BD4EA9B3D2363C /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2573971CCBA4243A4108EA0 /* EvilIcons.ttf */; };
+		1F167A39E8DE460A8D7DD5D8 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 635E156F92BB4783AFA7136D /* MaterialIcons.ttf */; };
+		322B460250BB429692D773BD /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BC13EBAD8164FEFBE8A2D63 /* SimpleLineIcons.ttf */; };
+		32C22308B5AD4B9DB9079A11 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 093F718B096342048D0D87A5 /* AntDesign.ttf */; };
+		496117787C82596929E2EA8A /* libPods-dogehouseTvMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB29D5E1F254E713496C3FB /* libPods-dogehouseTvMobile.a */; };
+		4ED4B5D5DA354E2B82506009 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC3E51E7C4BE4221B71AE4B9 /* Zocial.ttf */; };
+		550B2F92E18549A6953D2C46 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AADDB45843854E8C8FD5AB4E /* Entypo.ttf */; };
+		66B229F85D6844C4A45CF1E4 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FBDDD894E4D5CB2BDF6DC /* FontAwesome5_Brands.ttf */; };
+		681AA7EE180C46AB811FFCFB /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2718AF444B64482F8C8FA138 /* MaterialCommunityIcons.ttf */; };
+		7F1C205299A343279DBB323E /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 492744C11526457C901C20C8 /* Octicons.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		85A114666C519459954C760C /* libPods-dogehouseTvMobile-dogehouseTvMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBC6012B92DEC96B1BBC8AA /* libPods-dogehouseTvMobile-dogehouseTvMobileTests.a */; };
+		91FE1F2FDFAB4EF9A6664299 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C0357978C724A66B96A1489 /* Foundation.ttf */; };
+		9A9CCE5FBC4B4F08B7D99976 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7ED792CAAF4654892908F4 /* Feather.ttf */; };
+		A61E9E2023DF45C0A9828CEE /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E16B2B242F449DD914EFFE6 /* FontAwesome5_Regular.ttf */; };
+		DA4263D740CD474EBC599330 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1732E8BE266046718E41700F /* Ionicons.ttf */; };
+		DEDCE962EF8B4A31A2B5B9DD /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C76025F0934E420A8C1E1BB1 /* Fontisto.ttf */; };
+		E2A7516EAB6E44A5A3929FE3 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56AD8F2C9CC84193AAD5ABCB /* FontAwesome5_Solid.ttf */; };
+		E3BF0E28A78C459397E5C4AE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671A9EA32F8643489731B911 /* FontAwesome.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +46,36 @@
 		00E356EE1AD99517003FC87E /* dogehouseTvMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dogehouseTvMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* dogehouseTvMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dogehouseTvMobileTests.m; sourceTree = "<group>"; };
+		03ECC9D3D1C2E70CA2A618D4 /* Pods-dogehouseTvMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dogehouseTvMobile.release.xcconfig"; path = "Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile.release.xcconfig"; sourceTree = "<group>"; };
+		093F718B096342048D0D87A5 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* dogehouseTvMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogehouseTvMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = dogehouseTvMobile/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = dogehouseTvMobile/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = dogehouseTvMobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = dogehouseTvMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = dogehouseTvMobile/main.m; sourceTree = "<group>"; };
+		1732E8BE266046718E41700F /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		1E16B2B242F449DD914EFFE6 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		2718AF444B64482F8C8FA138 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		2F7ED792CAAF4654892908F4 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		3735E773AB260402478263E0 /* Pods-dogehouseTvMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dogehouseTvMobile.debug.xcconfig"; path = "Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0357978C724A66B96A1489 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		492744C11526457C901C20C8 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		4A6BCB0D915D0DFD49DE09E1 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dogehouseTvMobile-dogehouseTvMobileTests.release.xcconfig"; path = "Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		56AD8F2C9CC84193AAD5ABCB /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		635E156F92BB4783AFA7136D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		671A9EA32F8643489731B911 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		7DB29D5E1F254E713496C3FB /* libPods-dogehouseTvMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dogehouseTvMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = dogehouseTvMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93611513AFCDA28D529BF6B7 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dogehouseTvMobile-dogehouseTvMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BC13EBAD8164FEFBE8A2D63 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		9CBC6012B92DEC96B1BBC8AA /* libPods-dogehouseTvMobile-dogehouseTvMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dogehouseTvMobile-dogehouseTvMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E0FBDDD894E4D5CB2BDF6DC /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		AADDB45843854E8C8FD5AB4E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		C76025F0934E420A8C1E1BB1 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		DC3E51E7C4BE4221B71AE4B9 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F2573971CCBA4243A4108EA0 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A114666C519459954C760C /* libPods-dogehouseTvMobile-dogehouseTvMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496117787C82596929E2EA8A /* libPods-dogehouseTvMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				7DB29D5E1F254E713496C3FB /* libPods-dogehouseTvMobile.a */,
+				9CBC6012B92DEC96B1BBC8AA /* libPods-dogehouseTvMobile-dogehouseTvMobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +153,8 @@
 				00E356EF1AD99517003FC87E /* dogehouseTvMobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				C863952DAEBF4CE489AE9970 /* Resources */,
+				C15EB0D3EFFB89C847987632 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -124,6 +170,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C15EB0D3EFFB89C847987632 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3735E773AB260402478263E0 /* Pods-dogehouseTvMobile.debug.xcconfig */,
+				03ECC9D3D1C2E70CA2A618D4 /* Pods-dogehouseTvMobile.release.xcconfig */,
+				93611513AFCDA28D529BF6B7 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.debug.xcconfig */,
+				4A6BCB0D915D0DFD49DE09E1 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C863952DAEBF4CE489AE9970 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				093F718B096342048D0D87A5 /* AntDesign.ttf */,
+				AADDB45843854E8C8FD5AB4E /* Entypo.ttf */,
+				F2573971CCBA4243A4108EA0 /* EvilIcons.ttf */,
+				2F7ED792CAAF4654892908F4 /* Feather.ttf */,
+				671A9EA32F8643489731B911 /* FontAwesome.ttf */,
+				9E0FBDDD894E4D5CB2BDF6DC /* FontAwesome5_Brands.ttf */,
+				1E16B2B242F449DD914EFFE6 /* FontAwesome5_Regular.ttf */,
+				56AD8F2C9CC84193AAD5ABCB /* FontAwesome5_Solid.ttf */,
+				C76025F0934E420A8C1E1BB1 /* Fontisto.ttf */,
+				3C0357978C724A66B96A1489 /* Foundation.ttf */,
+				1732E8BE266046718E41700F /* Ionicons.ttf */,
+				2718AF444B64482F8C8FA138 /* MaterialCommunityIcons.ttf */,
+				635E156F92BB4783AFA7136D /* MaterialIcons.ttf */,
+				492744C11526457C901C20C8 /* Octicons.ttf */,
+				9BC13EBAD8164FEFBE8A2D63 /* SimpleLineIcons.ttf */,
+				DC3E51E7C4BE4221B71AE4B9 /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "dogehouseTvMobileTests" */;
 			buildPhases = (
+				8AAA25BD493905343B1BD853 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				1C49FF043B4552C8B0CCD996 /* [CP] Embed Pods Frameworks */,
+				C918B84C7539B3420AD1436F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,11 +232,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "dogehouseTvMobile" */;
 			buildPhases = (
+				D163A37B15BF223728FDD2FB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				5442797CF7567A0ABA887F01 /* [CP] Embed Pods Frameworks */,
+				A80CE0A027A4EB8CE5D07495 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +300,22 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				32C22308B5AD4B9DB9079A11 /* AntDesign.ttf in Resources */,
+				550B2F92E18549A6953D2C46 /* Entypo.ttf in Resources */,
+				1789990F51BD4EA9B3D2363C /* EvilIcons.ttf in Resources */,
+				9A9CCE5FBC4B4F08B7D99976 /* Feather.ttf in Resources */,
+				E3BF0E28A78C459397E5C4AE /* FontAwesome.ttf in Resources */,
+				66B229F85D6844C4A45CF1E4 /* FontAwesome5_Brands.ttf in Resources */,
+				A61E9E2023DF45C0A9828CEE /* FontAwesome5_Regular.ttf in Resources */,
+				E2A7516EAB6E44A5A3929FE3 /* FontAwesome5_Solid.ttf in Resources */,
+				DEDCE962EF8B4A31A2B5B9DD /* Fontisto.ttf in Resources */,
+				91FE1F2FDFAB4EF9A6664299 /* Foundation.ttf in Resources */,
+				DA4263D740CD474EBC599330 /* Ionicons.ttf in Resources */,
+				681AA7EE180C46AB811FFCFB /* MaterialCommunityIcons.ttf in Resources */,
+				1F167A39E8DE460A8D7DD5D8 /* MaterialIcons.ttf in Resources */,
+				7F1C205299A343279DBB323E /* Octicons.ttf in Resources */,
+				322B460250BB429692D773BD /* SimpleLineIcons.ttf in Resources */,
+				4ED4B5D5DA354E2B82506009 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +335,119 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		1C49FF043B4552C8B0CCD996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5442797CF7567A0ABA887F01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AAA25BD493905343B1BD853 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dogehouseTvMobile-dogehouseTvMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A80CE0A027A4EB8CE5D07495 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile/Pods-dogehouseTvMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C918B84C7539B3420AD1436F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dogehouseTvMobile-dogehouseTvMobileTests/Pods-dogehouseTvMobile-dogehouseTvMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D163A37B15BF223728FDD2FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dogehouseTvMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -286,6 +501,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93611513AFCDA28D529BF6B7 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -312,6 +528,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A6BCB0D915D0DFD49DE09E1 /* Pods-dogehouseTvMobile-dogehouseTvMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -335,6 +552,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3735E773AB260402478263E0 /* Pods-dogehouseTvMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -360,6 +578,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03ECC9D3D1C2E70CA2A618D4 /* Pods-dogehouseTvMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -414,6 +633,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -478,6 +698,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
