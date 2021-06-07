@@ -12,6 +12,8 @@ target 'dogehouseTvMobile' do
     :hermes_enabled => false
   )
 
+
+
   target 'dogehouseTvMobileTests' do
     inherit! :complete
     # Pods for testing
