@@ -1,0 +1,22 @@
+overwrite: true
+schema: 
+  - "https://api.dogehouse.online/graphql":
+    headers: 
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTYyMzEwODY2NCwiZXhwIjoxNjIzMTQ0NjY0LCJpc3MiOiJhdXRoIn0.QKaP1jTtK2NVfPRM8zOQVinhljGEd1g78LWwDsaNHbs"
+
+documents: "src/GQL/ClientOperations.graphql"
+generates:
+  src/GQL/GraphqlOperations.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+      - 'typescript-apollo-client-helpers'
+    config:
+      skipTypename: false
+      withHooks: true
+      withHOC: false
+      typesPrefix: I
+      withResultType: true
+      withComponent: false
+      apolloReactHooksImportFrom: "@apollo/client"
