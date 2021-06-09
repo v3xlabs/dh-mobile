@@ -1,12 +1,15 @@
 import 'react-native-gesture-handler';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 
+import { ApolloProvider } from '@apollo/client';
 import { AuthContextProvider } from './src/Contexts/AuthContext';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './src/screens/HomeTabs/Navigator';
 import React from 'react';
+import { client } from './src/Contexts/ApolloProvider';
+import { theme } from './src/Constants/Colors';
 
 declare global {
   namespace ReactNativePaper {
@@ -20,7 +23,7 @@ declare global {
   }
 }
 
-const theme = {
+const PaperTheme = {
   ...DefaultTheme,
   // Specify custom property
   dark: true,
@@ -30,48 +33,27 @@ const theme = {
     ...DefaultTheme.colors,
     red: '#fd4d4d',
     text: '#dee3ea',
+    primary: theme.palette.primary[900],
   },
 };
-
-/*#0b0e11
- primary: {
-            100: "#dee3ea",
-            200: "#b2bdcd",
-            300: "#5d7290", // Searchbar text color
-            400: "#5d7290", // Items hover
-            500: "#5d7290", // "+" hover
-            600: "#323d4d", // Separators and +
-            700: "#242c37", // Bg (Explore more rooms) + hover
-            800: "#151a21", // Bg boxes
-            900: "#" // Main bg
-        },
-        accent: {
-            default: "#fd4d4d",
-            disabled: "#f5bfbf",
-            hover: "#fd6868"
-        },
-        secondary: {
-            default: "#5575e7",
-            washedOut: "#879eed"
-        },
-        buttonText: "#fff"
-*/
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
       <StatusBar
-        barStyle="dark-content"
+        barStyle={Platform.OS === 'ios' ? 'dark-content' : 'light-content'}
         translucent={false}
-        backgroundColor={theme.colors.primary}
+        backgroundColor={theme.palette.primary[900]}
       />
-      <NavigationContainer>
-        <PaperProvider theme={theme}>
-          <AuthContextProvider>
-            <Navigator />
-          </AuthContextProvider>
-        </PaperProvider>
-      </NavigationContainer>
+      <ApolloProvider client={client}>
+        <NavigationContainer>
+          <PaperProvider theme={PaperTheme}>
+            <AuthContextProvider>
+              <Navigator />
+            </AuthContextProvider>
+          </PaperProvider>
+        </NavigationContainer>
+      </ApolloProvider>
     </SafeAreaView>
   );
 };
