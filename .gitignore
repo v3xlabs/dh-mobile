@@ -1,7 +1,7 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
-# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,linux,macos,node,react,reactnative
-# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,linux,macos,node,react,reactnative
+# Created by https://www.toptal.com/developers/gitignore/api/reactnative,react,node,macos,linux,androidstudio,android,xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=reactnative,react,node,macos,linux,androidstudio,android,xcode
 
 ### Android ###
 # Built application files
@@ -470,6 +470,21 @@ DerivedData/
 
 # Directories potentially created on remote AFP share
 
+### Xcode ###
+# Xcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+
+
+
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
 
@@ -580,7 +595,7 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,linux,macos,node,react,reactnative
+# End of https://www.toptal.com/developers/gitignore/api/reactnative,react,node,macos,linux,androidstudio,android,xcode
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
