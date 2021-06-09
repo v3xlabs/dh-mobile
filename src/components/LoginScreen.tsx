@@ -2,6 +2,7 @@ import { Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import { WebView, WebViewNavigation } from 'react-native-webview';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import FAIcon from 'react-native-vector-icons/FontAwesome5';
 import Header from './Header';
 import { IconButton } from 'react-native-paper';
@@ -17,6 +18,10 @@ const LoginScreen: React.FC<LoginScreenProps> = () => {
 
   const handleNavigationChange = (state: WebViewNavigation) => {
     if (ParseURL(state.url, true).query.token) {
+      AsyncStorage.setItem(
+        '@token',
+        ParseURL(state.url, true).query.token ?? ''
+      );
       setToken(ParseURL(state.url, true).query.token ?? null);
     }
   };
@@ -52,6 +57,8 @@ const LoginScreen: React.FC<LoginScreenProps> = () => {
           <View style={{ flex: 1 }}>
             {!!authUrl && (
               <WebView
+                sharedCookiesEnabled
+                thirdPartyCookiesEnabled
                 userAgent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1"
                 onNavigationStateChange={handleNavigationChange}
                 source={{ uri: authUrl }}
