@@ -16,7 +16,7 @@ import { setContext } from '@apollo/client/link/context';
 
 const bearerString = async () => {
   const token = await AsyncStorage.getItem('@token');
-  console.log(`Token is`, token);
+  //console.log(`Token is`, token);
 
   return `Bearer ${token ?? undefined}`;
 };
