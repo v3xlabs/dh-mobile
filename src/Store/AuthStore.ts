@@ -46,6 +46,7 @@ class AuthStoreClass {
    */
   setToken = (token: string | null): void => {
     this.token = token;
+    this.refetchUser();
   };
 
   /**
@@ -87,7 +88,7 @@ export const AuthStore = new AuthStoreClass();
 
 const dispose = autorun(async () => {
   try {
-    if (AuthStore.token) {
+    if (AuthStore.token?.length) {
       await AsyncStorage.setItem('@token', AuthStore.token || '');
     }
   } catch (error) {

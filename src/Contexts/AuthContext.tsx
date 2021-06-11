@@ -9,14 +9,12 @@ const AuthContext = createContext<typeof AuthStore>(AuthStore);
 export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthContextProvider: React.FC = observer(({ children }) => {
-  const { setUser, token } = useAuthContext();
   const { data: UserData, refetch } = useMeQuery();
 
   useEffect(() => {
-    if (UserData?.me || token) {
-      setUser(UserData?.me || null, refetch);
-    }
-  }, [setUser, refetch, UserData, token]);
+    AuthStore.setUser(UserData?.me || null, refetch);
+  }, [refetch, UserData?.me]);
+
   useEffect(() => {
     return () => {
       AuthStore.disposeAutorun();

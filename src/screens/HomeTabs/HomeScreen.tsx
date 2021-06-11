@@ -11,7 +11,7 @@ import { useRoute } from '@react-navigation/native';
 interface HomeScreenProps {}
 const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
   const route = useRoute();
-  const { token, logout, Me } = useAuthContext();
+  const { token, logout, Me, refetchUser } = useAuthContext();
   return (
     <>
       <Header title={route.name} />
@@ -29,6 +29,16 @@ const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
               }}
             >
               Logout
+            </Button>
+            <Button
+              mode="contained"
+              labelStyle={{ color: theme.palette.primary[100] }}
+              color={theme.palette.accent.default}
+              onPress={async () => {
+                await refetchUser();
+              }}
+            >
+              Refetch
             </Button>
             <Text>{JSON.stringify(Me, null, 2)}</Text>
           </View>

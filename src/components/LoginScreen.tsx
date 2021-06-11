@@ -3,10 +3,11 @@ import {
   LoginTabNavigationProp,
 } from '../types/NavigationPropTypes';
 import { Linking, StyleSheet, TouchableOpacity, View } from 'react-native';
+import React, { useEffect } from 'react';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import FAIcon from 'react-native-vector-icons/FontAwesome5';
 import Header from './Header';
-import React from 'react';
 import { RouteProp } from '@react-navigation/core';
 import { Text } from 'react-native-paper';
 import { theme } from '../Constants/Colors';
@@ -16,10 +17,18 @@ interface LoginScreenProps {
   navigation: LoginTabNavigationProp;
   route: RouteProp<HomeScreenTabNavigatorParamsList, 'Login'>;
 }
-const LoginScreen: React.FC<LoginScreenProps> = ({ route }) => {
+const LoginScreen: React.FC<LoginScreenProps> = ({ route, navigation }) => {
   const { setToken } = useAuthContext();
+  useEffect(() => {
+    if (route.params?.token) {
+      AsyncStorage.setItem('@token', route.params.token).then(() => {
+        setToken(
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTYyMzQyNTQyNSwiZXhwIjoxNjIzNDYxNDI1LCJpc3MiOiJhdXRoIn0.lFJvbSb-hEvDLhDs3oqpoOkyQhT7nE1Hz013wGacGMc'
+        );
+      });
+    }
+  }, [setToken, route, navigation]);
   if (route.params?.token) {
-    setToken(route.params.token);
     return null;
   }
   return (
