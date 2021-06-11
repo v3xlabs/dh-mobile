@@ -23,16 +23,16 @@ class AuthStoreClass {
   /**
    * Refetch currently logged in user's information from server
    */
-  refetchUser: () => Promise<unknown> = async () => {};
+  getUser: () => void = () => {};
   constructor() {
     makeAutoObservable(this);
     AsyncStorage.getItem('@token')
       .then(token => {
         runInAction(() => {
           if (token?.length) {
-            this.token = token;
+            this.setToken(token);
           } else {
-            this.token = null;
+            this.setToken(null);
           }
         });
       })
@@ -46,6 +46,7 @@ class AuthStoreClass {
    */
   setToken = (token: string | null): void => {
     this.token = token;
+    token && this.getUser();
   };
 
   /**
@@ -53,21 +54,18 @@ class AuthStoreClass {
    * @param User
    * @return { void }
    */
-  setUser = (
-    User: IMeQuery['me'] | null,
-    refetchUser: () => Promise<unknown>
-  ): void => {
+  setUser = (User: IMeQuery['me'] | null, getUser: () => void): void => {
     this.Me = User;
-    this.refetchUser = refetchUser;
+    this.getUser = getUser;
   };
 
   /**
    * Logout method
    */
   logout = async () => {
-    await AsyncStorage.setItem('@token', '');
     this.token = null;
     this.Me = null;
+    await AsyncStorage.setItem('@token', '');
   };
   /**
    * Computed property*
@@ -87,7 +85,7 @@ export const AuthStore = new AuthStoreClass();
 
 const dispose = autorun(async () => {
   try {
-    if (AuthStore.token) {
+    if (AuthStore.token?.length) {
       await AsyncStorage.setItem('@token', AuthStore.token || '');
     }
   } catch (error) {
