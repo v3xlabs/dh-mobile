@@ -14,14 +14,14 @@ const HomeScreenStackNavigator =
   createMaterialBottomTabNavigator<HomeScreenTabNavigatorParamsList>();
 interface NavigatorProps {}
 const Navigator: React.FC<NavigatorProps> = () => {
-  const { isLoggedIn } = useAuthContext();
+  const { Me } = useAuthContext();
   return (
     <HomeScreenStackNavigator.Navigator
       initialRouteName="Home"
       barStyle={{ backgroundColor: theme.palette.primary[900] }}
       activeColor={theme.palette.accent.default}
     >
-      {isLoggedIn ? (
+      {Me ? (
         <>
           <HomeScreenStackNavigator.Screen
             name="Home"

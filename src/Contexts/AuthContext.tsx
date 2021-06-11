@@ -1,19 +1,43 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AuthStore } from '../Store/AuthStore';
+import { Linking } from 'react-native';
 import { observer } from 'mobx-react-lite';
-import { useMeQuery } from '../GQL/GraphqlOperations';
+import { useMeLazyQuery } from '../GQL/GraphqlOperations';
 
 const AuthContext = createContext<typeof AuthStore>(AuthStore);
 
 export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthContextProvider: React.FC = observer(({ children }) => {
-  const { data: UserData, refetch } = useMeQuery();
+  // const {
+  //   data: UserData,
+  //   refetch,
+  //   loading,
+  // } = useMeQuery({ fetchPolicy: 'cache-and-network' });
+  const [getUser, { data: UserData, loading }] = useMeLazyQuery({
+    fetchPolicy: 'no-cache',
+  });
+  useEffect(() => {
+    AuthStore.setUser(UserData?.me || null, getUser);
+  }, [UserData?.me, getUser]);
 
   useEffect(() => {
-    AuthStore.setUser(UserData?.me || null, refetch);
-  }, [refetch, UserData?.me]);
+    Linking.addEventListener('url', onReceiveURL);
+    return () => {
+      Linking.removeEventListener('url', onReceiveURL);
+    };
+  });
+
+  const onReceiveURL = async ({ url }: { url: string }) => {
+    const token = url.split('token=')[1];
+    if (token) {
+      await AsyncStorage.setItem('@token', token);
+      AuthStore.setToken(token);
+      getUser();
+    }
+  };
 
   useEffect(() => {
     return () => {
@@ -21,6 +45,8 @@ export const AuthContextProvider: React.FC = observer(({ children }) => {
     };
   });
   return (
-    <AuthContext.Provider value={AuthStore}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={AuthStore}>
+      {loading ? null : children}
+    </AuthContext.Provider>
   );
 });
