@@ -40,6 +40,7 @@ const PaperTheme = {
 const App = () => {
   const linking: LinkingOptions = {
     prefixes: ['https://dogehouse.online', 'dogehouse://'],
+    enabled: true,
     config: {
       screens: {
         Login: 'login',
