@@ -1,11 +1,11 @@
 import 'react-native-gesture-handler';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 
 import { ApolloProvider } from '@apollo/client';
 import { AuthContextProvider } from './src/Contexts/AuthContext';
-import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './src/screens/HomeTabs/Navigator';
 import React from 'react';
 import { client } from './src/Contexts/ApolloProvider';
@@ -38,6 +38,14 @@ const PaperTheme = {
 };
 
 const App = () => {
+  const linking: LinkingOptions = {
+    prefixes: ['https://dogehouse.online', 'dogehouse://'],
+    config: {
+      screens: {
+        Login: 'login',
+      },
+    },
+  };
   return (
     <SafeAreaView style={styles.root}>
       <StatusBar
@@ -46,7 +54,7 @@ const App = () => {
         backgroundColor={theme.palette.primary[900]}
       />
       <ApolloProvider client={client}>
-        <NavigationContainer>
+        <NavigationContainer linking={linking}>
           <PaperProvider theme={PaperTheme}>
             <AuthContextProvider>
               <Navigator />

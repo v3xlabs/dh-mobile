@@ -65,9 +65,9 @@ class AuthStoreClass {
    * Logout method
    */
   logout = async () => {
-    await AsyncStorage.setItem('@token', '');
     this.token = null;
     this.Me = null;
+    await AsyncStorage.setItem('@token', '');
   };
   /**
    * Computed property*
