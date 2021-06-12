@@ -1,6 +1,4 @@
 PODS:
-<<<<<<< HEAD
-=======
   - appcenter-analytics (4.1.0):
     - AppCenter/Analytics (~> 4.0)
     - AppCenterReactNativeShared (~> 4.0)
@@ -19,7 +17,6 @@ PODS:
     - AppCenter/Core
   - AppCenterReactNativeShared (4.1.0):
     - AppCenter/Core (= 4.1.1)
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
@@ -84,10 +81,6 @@ PODS:
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
   - glog (0.3.5)
-<<<<<<< HEAD
-  - hermes-engine (0.7.2)
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - JWT (3.0.0-beta.14):
     - Base64 (~> 1.1.2)
   - libevent (2.1.12)
@@ -101,14 +94,6 @@ PODS:
     - boost-for-react-native
     - DoubleConversion
     - glog
-<<<<<<< HEAD
-  - RCT-Folly/Futures (2020.01.13.00):
-    - boost-for-react-native
-    - DoubleConversion
-    - glog
-    - libevent
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - RCTRequired (0.64.2)
   - RCTTypeSafety (0.64.2):
     - FBLazyVector (= 0.64.2)
@@ -166,19 +151,6 @@ PODS:
     - React-jsinspector (= 0.64.2)
     - React-perflogger (= 0.64.2)
     - Yoga
-<<<<<<< HEAD
-  - React-Core/Hermes (0.64.2):
-    - glog
-    - hermes-engine
-    - RCT-Folly (= 2020.01.13.00)
-    - RCT-Folly/Futures
-    - React-cxxreact (= 0.64.2)
-    - React-jsi (= 0.64.2)
-    - React-jsiexecutor (= 0.64.2)
-    - React-perflogger (= 0.64.2)
-    - Yoga
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - React-Core/RCTActionSheetHeaders (0.64.2):
     - glog
     - RCT-Folly (= 2020.01.13.00)
@@ -418,12 +390,9 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
-<<<<<<< HEAD
-=======
   - appcenter-analytics (from `../node_modules/appcenter-analytics/ios`)
   - appcenter-core (from `../node_modules/appcenter/ios`)
   - appcenter-crashes (from `../node_modules/appcenter-crashes/ios`)
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -448,11 +417,6 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.75.1)
   - FlipperKit/SKIOSNetworkPlugin (~> 0.75.1)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-<<<<<<< HEAD
-  - hermes-engine (~> 0.7.2)
-  - libevent (~> 2.1.12)
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -460,10 +424,6 @@ DEPENDENCIES:
   - React-callinvoker (from `../node_modules/react-native/ReactCommon/callinvoker`)
   - React-Core (from `../node_modules/react-native/`)
   - React-Core/DevSupport (from `../node_modules/react-native/`)
-<<<<<<< HEAD
-  - React-Core/Hermes (from `../node_modules/react-native/`)
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   - React-Core/RCTWebSocket (from `../node_modules/react-native/`)
   - React-CoreModules (from `../node_modules/react-native/React/CoreModules`)
   - React-cxxreact (from `../node_modules/react-native/ReactCommon/cxxreact`)
@@ -493,11 +453,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-<<<<<<< HEAD
-=======
     - AppCenter
     - AppCenterReactNativeShared
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
     - Base64
     - boost-for-react-native
     - CocoaAsyncSocket
@@ -508,10 +465,6 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - Flipper-RSocket
     - FlipperKit
-<<<<<<< HEAD
-    - hermes-engine
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
     - JWT
     - libevent
     - OpenSSL-Universal
@@ -519,15 +472,12 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
-<<<<<<< HEAD
-=======
   appcenter-analytics:
     :path: "../node_modules/appcenter-analytics/ios"
   appcenter-core:
     :path: "../node_modules/appcenter/ios"
   appcenter-crashes:
     :path: "../node_modules/appcenter-crashes/ios"
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   CodePush:
     :path: "../node_modules/react-native-code-push"
   DoubleConversion:
@@ -602,14 +552,11 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-<<<<<<< HEAD
-=======
   AppCenter: cd53e3ed3563cc720bcb806c9731a12389b40d44
   appcenter-analytics: aa074250b2cb182d6f7d67d9c236dd4606673ab5
   appcenter-core: c97920e79eba2321a262d3733cb2a6f1097db539
   appcenter-crashes: 804ae51c5d1742ce20fdb6a68b3d06208a404ad5
   AppCenterReactNativeShared: 2d5a53b6cbd2fe7f63f0033e9f0a40757a4eacf5
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
@@ -625,10 +572,6 @@ SPEC CHECKSUMS:
   Flipper-RSocket: 127954abe8b162fcaf68d2134d34dc2bd7076154
   FlipperKit: 8a20b5c5fcf9436cac58551dc049867247f64b00
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
-<<<<<<< HEAD
-  hermes-engine: 7d97ba46a1e29bacf3e3c61ecb2804a5ddd02d4f
-=======
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
@@ -666,10 +609,6 @@ SPEC CHECKSUMS:
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: 32a687df864b7106a298b22b7bf3308bf1109a7a
-=======
 PODFILE CHECKSUM: 5e57e2796ad9ce5daba456f83d9b059f7381409f
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
 
 COCOAPODS: 1.10.1

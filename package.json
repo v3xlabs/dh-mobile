@@ -17,10 +17,7 @@
     "@react-navigation/material-bottom-tabs": "^5.3.15",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
-<<<<<<< HEAD
-=======
     "appcenter": "4.1.0",
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
     "graphql": "^15.5.0",
     "mobx": "^6.3.2",
     "mobx-react-lite": "^3.2.0",

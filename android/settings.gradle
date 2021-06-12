@@ -1,11 +1,6 @@
 rootProject.name = 'dogehouseTvMobile'
-<<<<<<< HEAD
-// include ':appcenter'
-// project(':appcenter').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter/android')
-=======
 include ':appcenter'
 project(':appcenter').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter/android')
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 include ':react-native-vector-icons'

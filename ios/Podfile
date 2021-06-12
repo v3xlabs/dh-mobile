@@ -14,10 +14,7 @@ target 'dogehouseTvMobile' do
 
 
 
-<<<<<<< HEAD
-=======
   pod 'appcenter-core', :path => '../node_modules/appcenter'
->>>>>>> 0d1f37d43ba878276f8b32c2ee38586e9e3f0afe
 
 
 
