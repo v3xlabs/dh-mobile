@@ -7,8 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "android-update": "appcenter codepush release-react -a dogehouse/dogehouse-1 -d deployment",
-    "ios-update": "appcenter codepush release-react -a dogehouse/dogehouse -d deployment",
+    "update:android": "appcenter codepush release-react -a dogehouse/dogehouse-1 -d deployment",
+    "update:ios": "appcenter codepush release-react -a dogehouse/dogehouse -d deployment --plist-file=ios/dogehouseTvMobile/Info.plist",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "generate:gql": "graphql-codegen --config graphql-codegen.yml"
   },
