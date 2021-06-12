@@ -11,14 +11,14 @@ import { useRoute } from '@react-navigation/native';
 interface HomeScreenProps {}
 const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
   const route = useRoute();
-  const { token, logout, Me, getUser } = useAuthContext();
+  const { logout, Me, getUser } = useAuthContext();
   return (
     <>
       <Header title={route.name} />
       <View style={{ flex: 1, backgroundColor: theme.palette.primary[800] }}>
         <ScrollView>
           <Text>HomeScreen</Text>
-          <Text>`token: {token}`</Text>
+          <Text>Powered by Luc</Text>
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Button
               mode="contained"
@@ -34,8 +34,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
               mode="contained"
               labelStyle={{ color: theme.palette.primary[100] }}
               color={theme.palette.accent.default}
-              onPress={async () => {
-                await getUser();
+              onPress={() => {
+                getUser();
               }}
             >
               Refetch
