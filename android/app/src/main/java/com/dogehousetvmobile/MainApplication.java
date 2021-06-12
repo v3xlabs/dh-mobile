@@ -1,5 +1,6 @@
 package com.dogehousetvmobile;
 
+import com.microsoft.codepush.react.CodePush;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -21,7 +22,7 @@ public class MainApplication extends Application implements ReactApplication {
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
-
+       
         @Override
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
@@ -34,6 +35,11 @@ public class MainApplication extends Application implements ReactApplication {
         @Override
         protected String getJSMainModuleName() {
           return "index";
+        }
+
+        @Override
+        protected String getJSBundleFile() {
+          return CodePush.getJSBundleFile();
         }
       };
 
@@ -80,3 +86,13 @@ public class MainApplication extends Application implements ReactApplication {
     }
   }
 }
+// public class MainApplication extends Application implements ReactApplication {
+
+//    private final MyReactNativeHost mReactNativeHost = new MyReactNativeHost(this);
+
+//    @Override
+//    public void onCreate() {
+//      CodePush.setReactInstanceHolder(mReactNativeHost);
+//      super.onCreate();
+//   }
+// }
