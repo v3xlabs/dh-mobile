@@ -6,7 +6,6 @@ import { RoomsTabNavigationProp } from '../../types/NavigationPropTypes';
 import { Text } from 'react-native-paper';
 import { observer } from 'mobx-react-lite';
 import { theme } from '../../Constants/Colors';
-import { useAuthContext } from '../../Contexts/AuthContext';
 import { useRoute } from '@react-navigation/native';
 
 interface RoomsScreenProps {
@@ -14,7 +13,6 @@ interface RoomsScreenProps {
 }
 const RoomsScreen: React.FC<RoomsScreenProps> = ({ navigation }) => {
   const route = useRoute();
-  const { token } = useAuthContext();
 
   return (
     <>
@@ -26,7 +24,6 @@ const RoomsScreen: React.FC<RoomsScreenProps> = ({ navigation }) => {
       <View style={{ flex: 1, backgroundColor: theme.palette.primary[800] }}>
         <ScrollView>
           <Text>RoomsScreen</Text>
-          <Text>`token: ${token}`</Text>
         </ScrollView>
       </View>
     </>

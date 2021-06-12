@@ -6,7 +6,6 @@ import { Text } from 'react-native-paper';
 import { View } from 'react-native';
 import { observer } from 'mobx-react-lite';
 import { theme } from '../../Constants/Colors';
-import { useAuthContext } from '../../Contexts/AuthContext';
 import { useRoute } from '@react-navigation/core';
 
 interface PeopleScreenProps {
@@ -14,7 +13,6 @@ interface PeopleScreenProps {
 }
 const PeopleScreen: React.FC<PeopleScreenProps> = ({ navigation }) => {
   const route = useRoute();
-  const { token } = useAuthContext();
   return (
     <>
       <Header
@@ -26,7 +24,6 @@ const PeopleScreen: React.FC<PeopleScreenProps> = ({ navigation }) => {
       <View style={{ flex: 1, backgroundColor: theme.palette.primary[800] }}>
         <ScrollView>
           <Text>PeopleScreen</Text>
-          <Text>`token: ${token}`</Text>
         </ScrollView>
       </View>
     </>
