@@ -1,6 +1,0 @@
-module Pods_dogehouseTvMobile {
-  umbrella header "Pods-dogehouseTvMobile-umbrella.h"
-
-  export *
-  module * { export * }
-}
