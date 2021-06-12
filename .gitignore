@@ -3,6 +3,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/reactnative,react,node,macos,linux,androidstudio,android,xcode
 # Edit at https://www.toptal.com/developers/gitignore?templates=reactnative,react,node,macos,linux,androidstudio,android,xcode
 
+
+ios/Pods
 ### Android ###
 # Built application files
 *.apk
@@ -119,7 +121,8 @@ output.json
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
