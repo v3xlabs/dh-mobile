@@ -1,0 +1,6 @@
+module Pods_dogehouseTvMobile_dogehouseTvMobileTests {
+  umbrella header "Pods-dogehouseTvMobile-dogehouseTvMobileTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
