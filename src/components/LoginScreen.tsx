@@ -22,6 +22,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ route }) => {
       <Header title={route.name} />
       <View style={styles.wrapper}>
         <View style={styles.inner}>
+          <Text>HELLO LUCE</Text>
           <View style={{ padding: 10, flexDirection: 'column' }}>
             <View style={{ marginBottom: 20 }}>
               <Text

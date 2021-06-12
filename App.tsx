@@ -9,6 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './src/screens/HomeTabs/Navigator';
 import React from 'react';
 import { client } from './src/Contexts/ApolloProvider';
+import codePush from 'react-native-code-push';
 import { theme } from './src/Constants/Colors';
 
 declare global {
@@ -90,4 +91,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush({
+  checkFrequency: codePush.CheckFrequency.ON_APP_START,
+  installMode: codePush.InstallMode.IMMEDIATE,
+})(App);

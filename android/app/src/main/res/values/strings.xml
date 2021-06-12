@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">dogehouseTvMobile</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">dqt-SRtT4kPw4ySTirAeEy08GpxPyUiEp9RGl</string>
 </resources>
