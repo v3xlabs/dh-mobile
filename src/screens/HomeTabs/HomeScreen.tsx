@@ -7,11 +7,14 @@ import { observer } from 'mobx-react-lite';
 import { theme } from '../../Constants/Colors';
 import { useAuthContext } from '../../Contexts/AuthContext';
 import { useRoute } from '@react-navigation/native';
+import { useRoomsContext } from '../../Contexts/RoomsContext';
 
 interface HomeScreenProps {}
 const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
   const route = useRoute();
-  const { logout, Me, getUser } = useAuthContext();
+  const { logout, getUser } = useAuthContext();
+  const { Rooms } = useRoomsContext();
+
   return (
     <>
       <Header title={route.name} />
@@ -40,7 +43,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
             >
               Refetch
             </Button>
-            <Text>{JSON.stringify(Me, null, 2)}</Text>
+            <Text>{JSON.stringify(Rooms, null, 2)}</Text>
           </View>
         </ScrollView>
       </View>

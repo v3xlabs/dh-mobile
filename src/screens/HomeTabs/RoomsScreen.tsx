@@ -29,5 +29,6 @@ const RoomsScreen: React.FC<RoomsScreenProps> = ({ navigation }) => {
     </>
   );
 };
+
 export default observer(RoomsScreen);
 // const styles = StyleSheet.create({})

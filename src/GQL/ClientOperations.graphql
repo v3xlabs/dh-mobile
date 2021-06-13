@@ -8,3 +8,41 @@ query Me {
     following_count
   }
 }
+query getRooms {
+  rooms {
+    id
+    name
+    description
+    members {
+      room_id
+      user {
+        username
+        avatar
+        bio
+        id
+      }
+    }
+  }
+}
+subscription RoomChanged {
+  roomChange {
+    event
+    room {
+      id
+      name
+      description
+      members {
+        room_id
+        user_id
+        role
+        user {
+          username
+          avatar
+          bio
+          id
+        }
+      }
+    }
+    room_id
+  }
+}

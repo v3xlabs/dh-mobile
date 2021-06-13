@@ -11,28 +11,23 @@ import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { onError } from '@apollo/client/link/error';
 import { setContext } from '@apollo/client/link/context';
+import { TypedTypePolicies } from '../GQL/GraphqlOperations';
 
-// get the authentication token from local storage if it exists
+const typePolicies: TypedTypePolicies = {};
 
 const bearerString = async () => {
   const token = await AsyncStorage.getItem('@token');
-  //console.log(`Token is`, token);
-
   return `Bearer ${token ?? undefined}`;
 };
-// cross platform web socketing triage (tldr use node lib on server and web lib on browser)
 
 const wsLink = new WebSocketLink({
   uri: 'wss://api.dogehouse.online/graphql',
   options: {
     reconnect: true,
-    lazy: true,
-    timeout: 3000,
-    connectionParams: {
-      authorization: async () => {
-        const bearer = await bearerString();
-        return bearer;
-      },
+    connectionParams: async () => {
+      return {
+        authorization: await bearerString(),
+      };
     },
   },
 });
@@ -90,10 +85,6 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 export const client = new ApolloClient({
   link: from([errorLink, splitLink]),
   cache: new InMemoryCache({
-    typePolicies: {
-      Room: {
-        keyFields: ['name'],
-      },
-    },
+    typePolicies,
   }),
 });

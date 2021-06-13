@@ -11,6 +11,7 @@ import React from 'react';
 import { client } from './src/Contexts/ApolloProvider';
 import codePush from 'react-native-code-push';
 import { theme } from './src/Constants/Colors';
+import RoomsContextProvider from './src/Contexts/RoomsContext';
 
 declare global {
   namespace ReactNativePaper {
@@ -76,7 +77,9 @@ const App = () => {
         <NavigationContainer>
           <PaperProvider theme={PaperTheme}>
             <AuthContextProvider>
-              <Navigator />
+              <RoomsContextProvider>
+                <Navigator />
+              </RoomsContextProvider>
             </AuthContextProvider>
           </PaperProvider>
         </NavigationContainer>
