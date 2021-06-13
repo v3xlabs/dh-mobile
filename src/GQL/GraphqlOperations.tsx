@@ -1,15 +1,12 @@
+import { gql } from '@apollo/client';
 import * as Apollo from '@apollo/client';
 import * as ApolloReactHooks from '@apollo/client';
-
 import {
   FieldPolicy,
   FieldReadFunction,
   TypePolicies,
   TypePolicy,
 } from '@apollo/client/cache';
-
-import { gql } from '@apollo/client';
-
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K];
@@ -128,6 +125,48 @@ export type IMeQuery = { __typename?: 'Query' } & {
   >;
 };
 
+export type IGetRoomsQueryVariables = Exact<{ [key: string]: never }>;
+
+export type IGetRoomsQuery = { __typename?: 'Query' } & {
+  rooms: Array<
+    { __typename?: 'Room' } & Pick<IRoom, 'id' | 'name' | 'description'> & {
+        members: Array<
+          { __typename?: 'Member' } & Pick<IMember, 'room_id'> & {
+              user: { __typename?: 'User' } & Pick<
+                IUser,
+                'username' | 'avatar' | 'bio' | 'id'
+              >;
+            }
+        >;
+      }
+  >;
+};
+
+export type IRoomChangedSubscriptionVariables = Exact<{ [key: string]: never }>;
+
+export type IRoomChangedSubscription = { __typename?: 'Subscription' } & {
+  roomChange: { __typename?: 'RoomChangePayload' } & Pick<
+    IRoomChangePayload,
+    'event' | 'room_id'
+  > & {
+      room?: Maybe<
+        { __typename?: 'Room' } & Pick<IRoom, 'id' | 'name' | 'description'> & {
+            members: Array<
+              { __typename?: 'Member' } & Pick<
+                IMember,
+                'room_id' | 'user_id' | 'role'
+              > & {
+                  user: { __typename?: 'User' } & Pick<
+                    IUser,
+                    'username' | 'avatar' | 'bio' | 'id'
+                  >;
+                }
+            >;
+          }
+      >;
+    };
+};
+
 export const MeDocument = gql`
   query Me {
     me {
@@ -180,6 +219,129 @@ export function useMeLazyQuery(
 export type MeQueryHookResult = ReturnType<typeof useMeQuery>;
 export type MeLazyQueryHookResult = ReturnType<typeof useMeLazyQuery>;
 export type MeQueryResult = Apollo.QueryResult<IMeQuery, IMeQueryVariables>;
+export const GetRoomsDocument = gql`
+  query getRooms {
+    rooms {
+      id
+      name
+      description
+      members {
+        room_id
+        user {
+          username
+          avatar
+          bio
+          id
+        }
+      }
+    }
+  }
+`;
+
+/**
+ * __useGetRoomsQuery__
+ *
+ * To run a query within a React component, call `useGetRoomsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetRoomsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetRoomsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetRoomsQuery(
+  baseOptions?: ApolloReactHooks.QueryHookOptions<
+    IGetRoomsQuery,
+    IGetRoomsQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return ApolloReactHooks.useQuery<IGetRoomsQuery, IGetRoomsQueryVariables>(
+    GetRoomsDocument,
+    options
+  );
+}
+export function useGetRoomsLazyQuery(
+  baseOptions?: ApolloReactHooks.LazyQueryHookOptions<
+    IGetRoomsQuery,
+    IGetRoomsQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return ApolloReactHooks.useLazyQuery<IGetRoomsQuery, IGetRoomsQueryVariables>(
+    GetRoomsDocument,
+    options
+  );
+}
+export type GetRoomsQueryHookResult = ReturnType<typeof useGetRoomsQuery>;
+export type GetRoomsLazyQueryHookResult = ReturnType<
+  typeof useGetRoomsLazyQuery
+>;
+export type GetRoomsQueryResult = Apollo.QueryResult<
+  IGetRoomsQuery,
+  IGetRoomsQueryVariables
+>;
+export const RoomChangedDocument = gql`
+  subscription RoomChanged {
+    roomChange {
+      event
+      room {
+        id
+        name
+        description
+        members {
+          room_id
+          user_id
+          role
+          user {
+            username
+            avatar
+            bio
+            id
+          }
+        }
+      }
+      room_id
+    }
+  }
+`;
+
+/**
+ * __useRoomChangedSubscription__
+ *
+ * To run a query within a React component, call `useRoomChangedSubscription` and pass it any options that fit your needs.
+ * When your component renders, `useRoomChangedSubscription` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the subscription, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useRoomChangedSubscription({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useRoomChangedSubscription(
+  baseOptions?: ApolloReactHooks.SubscriptionHookOptions<
+    IRoomChangedSubscription,
+    IRoomChangedSubscriptionVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return ApolloReactHooks.useSubscription<
+    IRoomChangedSubscription,
+    IRoomChangedSubscriptionVariables
+  >(RoomChangedDocument, options);
+}
+export type RoomChangedSubscriptionHookResult = ReturnType<
+  typeof useRoomChangedSubscription
+>;
+export type RoomChangedSubscriptionResult =
+  Apollo.SubscriptionResult<IRoomChangedSubscription>;
 export type FollowKeySpecifier = (
   | 'follower'
   | 'following'

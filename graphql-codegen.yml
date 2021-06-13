@@ -2,7 +2,7 @@ overwrite: true
 schema: 
   - "https://api.dogehouse.online/graphql":
     headers: 
-      Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTYyMzEwODY2NCwiZXhwIjoxNjIzMTQ0NjY0LCJpc3MiOiJhdXRoIn0.QKaP1jTtK2NVfPRM8zOQVinhljGEd1g78LWwDsaNHbs"
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTMsImlhdCI6MTYyMzYwNTA1OSwiZXhwIjoxNjIzNjQxMDU5LCJpc3MiOiJhdXRoIn0.jAaE3YRoOrYMvOTMw3tYDvWV1CKsBnppJfmRLgSSuyg"
 
 documents: "src/GQL/ClientOperations.graphql"
 generates:
