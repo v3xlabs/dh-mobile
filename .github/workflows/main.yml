@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@production
+        uses: actions/checkout@master
       - name: Install Dependencies
         run: yarn
       - name: Deploy to Codepush
