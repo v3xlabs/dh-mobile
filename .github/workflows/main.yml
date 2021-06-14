@@ -1,0 +1,21 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@production
+      - name: Install Dependencies
+        run: yarn
+      - name: Deploy to Codepush
+        uses: NishanthShankar/codepush-action@master
+        with:
+          args: release-react -a dogehouse/dogehouse-1 -d deployment
+        env:
+          APPCENTER_ACCESS_TOKEN: b7bf92eed320ce5fb6e64bcd88361b79002ed9c5
