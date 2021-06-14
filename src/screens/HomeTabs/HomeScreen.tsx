@@ -22,6 +22,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
         <ScrollView>
           <Text>HomeScreen</Text>
           <Text>Powered by Luc and Ouz</Text>
+          <Text>Now with a webRTC</Text>
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Button
               mode="contained"
