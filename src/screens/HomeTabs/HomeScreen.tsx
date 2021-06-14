@@ -21,7 +21,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({}) => {
       <View style={{ flex: 1, backgroundColor: theme.palette.primary[800] }}>
         <ScrollView>
           <Text>HomeScreen</Text>
-          <Text>Powered by Luc</Text>
+          <Text>Powered by Luc and Ouz</Text>
           <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Button
               mode="contained"
