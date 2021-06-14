@@ -18,10 +18,10 @@ jobs:
         with:
           args: release-react -a dogehouse/dogehouse-1 -d deployment
         env:
-          APPCENTER_ACCESS_TOKEN: b7bf92eed320ce5fb6e64bcd88361b79002ed9c5
+          APPCENTER_ACCESS_TOKEN: ${{ secrets.CODEPUSH_ANDROID_ACCESS_KEY }}
       - name: Deploy to Ios
         uses: NishanthShankar/codepush-action@master
         with:
           args: release-react -a dogehouse/dogehouse -d deployment --plist-file=ios/dogehouseTvMobile/Info.plist
         env:
-          APPCENTER_ACCESS_TOKEN: cfd8577787c92b57aa9a65e998706d49450d48f9
+          APPCENTER_ACCESS_TOKEN: ${{ secrets.CODEPUSH_IOS_ACCESS_KEY  }}
