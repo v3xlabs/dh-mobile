@@ -5,16 +5,20 @@ import {
   useGetRoomsQuery,
   useRoomChangedSubscription,
 } from '../GQL/GraphqlOperations';
+import { useAuthContext } from './AuthContext';
+import { observer } from 'mobx-react-lite';
 
 const RoomsContext = createContext<typeof RoomStore>(RoomStore);
 export const useRoomsContext = () => useContext(RoomsContext);
 
 const RoomsContextProvider: React.FC = ({ children }) => {
   const { data: RoomsData, refetch } = useGetRoomsQuery();
+  const { Me, isLoggedIn } = useAuthContext();
 
   useEffect(() => {
     RoomStore.setRooms(RoomsData?.rooms || [], refetch);
-  }, [RoomsData, refetch]);
+  }, [RoomsData, refetch, Me, isLoggedIn]);
+
   useRoomChangedSubscription({
     onSubscriptionData: Data => {
       console.log(`DAta`, Data.subscriptionData);
@@ -36,4 +40,4 @@ const RoomsContextProvider: React.FC = ({ children }) => {
     <RoomsContext.Provider value={RoomStore}>{children}</RoomsContext.Provider>
   );
 };
-export default RoomsContextProvider;
+export default observer(RoomsContextProvider);
