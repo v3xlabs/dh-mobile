@@ -1,5 +1,7 @@
 import { useContext, useEffect } from 'react';
 import React, { createContext } from 'react';
+import { Device } from 'mediasoup-client';
+
 import { RoomStore } from '../Store/RoomStore';
 import {
   useGetRoomsQuery,
@@ -14,13 +16,14 @@ export const useRoomsContext = () => useContext(RoomsContext);
 const RoomsContextProvider: React.FC = ({ children }) => {
   const { data: RoomsData, refetch } = useGetRoomsQuery();
   const { Me, isLoggedIn } = useAuthContext();
-
+  const device = new Device();
+  console.log(`ObserverCLS`, device.observer);
   useEffect(() => {
     RoomStore.setRooms(RoomsData?.rooms || [], refetch);
   }, [RoomsData, refetch, Me, isLoggedIn]);
 
   useRoomChangedSubscription({
-    onSubscriptionData: Data => {
+    onSubscriptionData: (Data) => {
       console.log(`DAta`, Data.subscriptionData);
       if (
         Data.subscriptionData.data?.roomChange.event === 'UPDATE' &&
