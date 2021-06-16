@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-
+import { registerGlobals } from 'react-native-webrtc';
 import { ApolloProvider } from '@apollo/client';
 import { AuthContextProvider } from './src/Contexts/AuthContext';
 import { NavigationContainer } from '@react-navigation/native';
@@ -12,7 +12,7 @@ import { client } from './src/Contexts/ApolloProvider';
 import codePush from 'react-native-code-push';
 import { theme } from './src/Constants/Colors';
 import RoomsContextProvider from './src/Contexts/RoomsContext';
-
+registerGlobals();
 declare global {
   namespace ReactNativePaper {
     interface ThemeColors {

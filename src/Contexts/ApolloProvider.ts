@@ -30,6 +30,10 @@ const wsLink = new WebSocketLink({
       };
     },
   },
+  onConnected: () => {
+    console.log(`COnnected`);
+    return () => {};
+  },
 });
 
 const httpLink = createHttpLink({
