@@ -34,7 +34,7 @@
     "react-native-vector-icons": "^8.1.0",
     "react-native-webrtc": "^1.89.3",
     "subscriptions-transport-ws": "^0.9.18",
-    "url-parse": "^1.5.1"
+    "url-parse": "^1.5.8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
